@@ -1,7 +1,7 @@
 package org.javaboy.vhr.model;
 
 import java.util.Date;
-
+//用于记录员工教育信息
 public class Employeeec {
     private Integer id;
 

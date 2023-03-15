@@ -1,7 +1,7 @@
 package org.javaboy.vhr.model;
 
 import java.util.Date;
-
+//扩展记录员工培训相关信息
 public class Employeetrain {
     private Integer id;
 

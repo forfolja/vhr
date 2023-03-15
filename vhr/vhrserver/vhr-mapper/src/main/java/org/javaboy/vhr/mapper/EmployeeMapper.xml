@@ -226,6 +226,8 @@
       #{contractTerm,jdbcType=DOUBLE}, #{conversionTime,jdbcType=DATE}, #{notWorkDate,jdbcType=DATE}, 
       #{beginContract,jdbcType=DATE}, #{endContract,jdbcType=DATE}, #{workAge,jdbcType=INTEGER}
       )
+
+<!--> 通过XML对insertSelective的具体方法完成了实现 <-->
   </insert>
     <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Employee" useGeneratedKeys="true"
             keyProperty="id">

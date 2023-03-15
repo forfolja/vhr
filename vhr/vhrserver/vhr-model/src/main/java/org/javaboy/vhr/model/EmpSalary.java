@@ -1,5 +1,6 @@
 package org.javaboy.vhr.model;
 
+//员工当前薪资信息
 public class EmpSalary {
     private Integer id;
 

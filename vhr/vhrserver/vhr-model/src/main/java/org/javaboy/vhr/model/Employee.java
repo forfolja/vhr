@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.util.Date;
-
+//记录员工基础信息
 public class Employee implements Serializable {
     private Integer id;
 

@@ -1,6 +1,7 @@
 package org.javaboy.vhr.model;
 
 import java.util.Date;
+//保存被移除的员工
 
 public class Employeeremove {
     private Integer id;

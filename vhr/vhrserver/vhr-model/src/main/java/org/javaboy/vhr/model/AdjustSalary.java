@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Date;
-
+//薪资调整相关
 public class AdjustSalary {
     private Integer id;
 

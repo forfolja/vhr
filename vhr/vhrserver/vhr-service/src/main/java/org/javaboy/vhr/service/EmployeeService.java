@@ -52,6 +52,7 @@ public class EmployeeService {
         return bean;
     }
 
+    //实例化的employee在进入写入之前，先完成了对合同期限的计算，之后才进行了Mapper调用insertSelective方法完成了数据库写入。
     public Integer addEmp(Employee employee) {
         Date beginContract = employee.getBeginContract();
         Date endContract = employee.getEndContract();

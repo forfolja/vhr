@@ -3,7 +3,7 @@ package org.javaboy.vhr.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
-
+//工资组成及结构信息
 public class Salary {
     private Integer id;
 
