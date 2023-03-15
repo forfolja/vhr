@@ -54,11 +54,14 @@ public class EmployeeService {
 
     //实例化的employee在进入写入之前，先完成了对合同期限的计算，之后才进行了Mapper调用insertSelective方法完成了数据库写入。
     public Integer addEmp(Employee employee) {
+        //获取employee的beginContract、endContract两个参数，然后计算出ContractTerm
         Date beginContract = employee.getBeginContract();
         Date endContract = employee.getEndContract();
         double month = (Double.parseDouble(yearFormat.format(endContract)) - Double.parseDouble(yearFormat.format(beginContract))) * 12 + (Double.parseDouble(monthFormat.format(endContract)) - Double.parseDouble(monthFormat.format(beginContract)));
         employee.setContractTerm(Double.parseDouble(decimalFormat.format(month / 12)));
+        //调用insertSelective方法进行数据落库，
         int result = employeeMapper.insertSelective(employee);
+        //数据落库成功后，使用MailSendLogService服务生成消息，并通过RabbitMQ完成发送；如果落库失败会返回失败结果。
         if (result == 1) {
             Employee emp = employeeMapper.getEmployeeById(employee.getId());
             //生成消息的唯一id

@@ -44,6 +44,8 @@ public class EmpBasicController {
 
     @PostMapping("/")
     //@RequestBody主要用来接收前端传递给后端的json字符串中的数据的(请求体中的数据的),相当于此时已经通过JSON方式获取了Employee对象的参数，并实例化出了employee。
+    //https://www.cnblogs.com/ZJOE80/p/14769036.html 比较完整地介绍了@RequestBody的使用
+    //RespBean类主要是用于向前端返回处理状态，包括状态码以及其他定义好的信息
     public RespBean addEmp(@RequestBody Employee employee) {
         if (employeeService.addEmp(employee) == 1) {
             return RespBean.ok("添加成功!");

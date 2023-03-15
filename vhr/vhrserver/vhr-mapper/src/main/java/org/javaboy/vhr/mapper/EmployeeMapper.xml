@@ -227,7 +227,7 @@
       #{beginContract,jdbcType=DATE}, #{endContract,jdbcType=DATE}, #{workAge,jdbcType=INTEGER}
       )
 
-<!--> 通过XML对insertSelective的具体方法完成了实现 <-->
+<!--> 通过XML对insertSelective的具体方法完成了实现，这里引用实体类Employee主要是获取实例化对象employee的参数参数类型，但是mybatis有反射机制，其实不写也没有啥问题 <-->
   </insert>
     <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Employee" useGeneratedKeys="true"
             keyProperty="id">

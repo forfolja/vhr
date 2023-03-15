@@ -13,7 +13,6 @@ public interface EmployeeMapper {
 
 
     //insertSelective方法的具体实现在XML中
-
     int insertSelective(Employee record);
 
     Employee selectByPrimaryKey(Integer id);
